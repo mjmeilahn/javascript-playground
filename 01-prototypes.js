@@ -1,0 +1,4 @@
+
+// BASE OBJECT "Person" & METHODS
+
+// PROTOTYPE "Employee" INHERITED FROM "Person" & METHODS
