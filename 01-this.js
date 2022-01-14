@@ -34,6 +34,7 @@ const car = {
         }, this)
     }
 }
-car.getDrivers() // "global" OR "window" OBJECT IF IN BROWSER
+car.getDrivers() // "global" OR "window" OBJECT IF IN BROWSER.
 // IN THIS UNIQUE CASE WE CAN PASS A SECOND ARGUMENT TO
-// "this.drivers.forEach()" WITH "this" TO REFERENCE "car"
+// "this.drivers.forEach()" WITH "this" TO REFERENCE "car."
+// IN OTHER CASES WE WOULD USE "call" "apply" OR "bind"
