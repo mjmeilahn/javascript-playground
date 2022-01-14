@@ -1,7 +1,9 @@
 # Javascript Playground
 
-1. Prototypes & OOP - TBD.
+1. "this" Keyword - TBD.
 
-2. NEW ECMAScript spec updates w/ examples, ES2015 - Present.
+2. Prototypes & OOP - TBD.
 
-3. Polyfills - TBD.
+3. NEW ECMAScript spec updates w/ examples, ES2015 - Present.
+
+4. Polyfills - TBD.
