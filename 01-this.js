@@ -53,7 +53,7 @@ const car = {
         }, this) // ADDED "this" TO REFERENCE "car" INSTANCE.
     }
 }
-// car.getDrivers() // "global" OR "window" OBJECT IF IN BROWSER.
+// car.getDrivers()
 
 
 //----------------------
