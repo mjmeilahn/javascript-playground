@@ -42,7 +42,7 @@ const testThis = function () {
 
 // IN THIS UNIQUE CASE WE CAN PASS A SECOND ARGUMENT TO
 // "this.drivers.forEach()" WITH "this" TO REFERENCE "car."
-// IN OTHER CASES WE WOULD USE "call" "apply" OR "bind"
+// IN OTHER CASES WE WOULD COMBINE "call" "apply" OR "bind"
 
 const car = {
     make: 'Tesla',
@@ -56,9 +56,18 @@ const car = {
 // car.getDrivers()
 
 
+
 //----------------------
-// METHOD CHAINING CAN BE ACCOMPLISHED ON AN OBJECT SIMPLY
-// BY ALWAYS RETURNING "this" AFTER EACH METHOD.
+// TODO: "this" USED INSIDE DECOUPLED FUNCTIONS
+// WITH "call", "apply" OR "bind"
+
+
+
+
+
+//----------------------
+// METHOD CHAINING WHERE "this" IS ALWAYS RETURNED.
+// HERE IT REFERS TO THE OBJECT OR PROTOTYPE INSTANCE.
 
 const animal = {
     type: 'monkey',
