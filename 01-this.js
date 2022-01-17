@@ -98,3 +98,9 @@ const animal = {
 // animal.getAge().getType()
 
 
+
+//---------------------------------
+// OTHER THAN THAT, "this" APPEARS IN VARIOUS MODERN JS
+// LIBRARIES & FRAMEWORKS LIKE REACT AND VUE.
+// IN THE CASE OF REACT, "this" REFERS TO A CLASS COMPONENT.
+// IN THE CASE OF VUE, "this" REFERS TO THE VUE INSTANCE.
