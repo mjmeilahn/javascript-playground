@@ -17,7 +17,7 @@ const person = {
 
 //----------------------
 // IF THE FUNCTION IS A CONSTRUCTOR FOR A PROTOTYPE,
-// "this" WILL REFER TO THE OBJECT INSTANCE "new Person()"
+// "this" WILL REFER TO THE OBJECT INSTANCE OF "new Person()"
 function Person (age) {
     this.age = age
 }
