@@ -58,10 +58,24 @@ const car = {
 
 
 //----------------------
-// TODO: "this" USED INSIDE DECOUPLED FUNCTIONS
-// WITH "call", "apply" OR "bind"
+// "this" IS USED INSIDE DECOUPLED FUNCTIONS THAT REFERENCE
+// THE OBJECT INSTANCE WITH "call", "apply" OR "bind"
 
-
+const employee = {
+    firstName: 'Bill',
+    lastName: 'Paxton',
+    job: 'Actor',
+    shoutOut: function () {
+        console.log(`His name is ${this.firstName} ${this.lastName}`)
+    }
+}
+const shoutItOut = employee.shoutOut
+const employeeShoutOut = shoutItOut.bind(employee)
+const employeeDescription = function () {
+    console.log(`${this.firstName} ${this.lastName} is an ${this.job}`)
+}
+// employeeDescription.apply(employee) // CAN ALSO USE "call"
+// employeeShoutOut()
 
 
 
