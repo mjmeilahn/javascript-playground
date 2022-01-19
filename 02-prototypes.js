@@ -21,7 +21,21 @@ const car = new Car('BMW', '550i', 2020)
 
 
 //----------------------------------------------
-// ES5: BASE OBJECT "Person" PROTOTYPE & METHODS
+// ES5: BASE "Person" PROTOTYPE & METHODS.
+// METHODS CAN BE RE-WRITTEN AS THE OBJECT INSTACE "new Person()"
+// LOOKS AT THE PROTOTYPE CHAIN FOR THE LATEST DECLARATION.
+function Person (name) {
+    this.name = name
+}
+Person.prototype.sayName = function () {
+    console.log(`My name is ${this.name}.`)
+}
+const me = new Person('Frank Costanza')
+me.sayName()
+Person.prototype.sayName = function () {
+    console.log('My other name is Art Van De Lay.')
+}
+me.sayName()
 
 
 //----------------------------------------------
