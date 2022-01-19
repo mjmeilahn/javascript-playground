@@ -32,7 +32,7 @@ function Person (name) {
 Person.prototype.sayName = function () {
     console.log(`My name is ${this.name}.`)
 }
-const me = new Person('Frank Costanza')
+const me = new Person('George Costanza')
 me.sayName()
 Person.prototype.sayName = function () {
     console.log('My other name is Art Van De Lay.')
