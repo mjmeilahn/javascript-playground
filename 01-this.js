@@ -69,13 +69,12 @@ const employee = {
         console.log(`His name is ${this.firstName} ${this.lastName}`)
     }
 }
-const shoutItOut = employee.shoutOut
-const employeeShoutOut = shoutItOut.bind(employee)
+const shoutOut = employee.shoutOut.bind(employee)
 const employeeDescription = function () {
     console.log(`${this.firstName} ${this.lastName} is an ${this.job}`)
 }
 // employeeDescription.apply(employee) // CAN ALSO USE "call"
-// employeeShoutOut()
+// shoutOut() // USEFUL WHEN YOU NEED BREVITY & OTHER CASES
 
 
 
@@ -102,5 +101,5 @@ const animal = {
 //---------------------------------
 // OTHER THAN THAT, "this" APPEARS IN VARIOUS MODERN JS
 // LIBRARIES & FRAMEWORKS LIKE REACT AND VUE.
-// IN THE CASE OF REACT, "this" REFERS TO A CLASS COMPONENT.
-// IN THE CASE OF VUE, "this" REFERS TO THE VUE INSTANCE.
+// IN THE CASE OF REACT: "this" REFERS TO AN ES6 CLASS COMPONENT.
+// IN THE CASE OF VUE: "this" REFERS TO THE VUE INSTANCE.
