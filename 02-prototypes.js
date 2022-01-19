@@ -33,11 +33,11 @@ Person.prototype.sayName = function () {
     console.log(`My name is ${this.name}.`)
 }
 const me = new Person('George Costanza')
-me.sayName()
+// me.sayName()
 Person.prototype.sayName = function () {
     console.log('My other name is Art Van De Lay.')
 }
-me.sayName()
+// me.sayName()
 
 
 //----------------------------------------------
