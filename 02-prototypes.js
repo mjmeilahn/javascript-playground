@@ -28,3 +28,5 @@ const car = new Car('BMW', '550i', 2020)
 // ES5: PROTOTYPE CHAIN "Employee" FROM "Person"
 
 
+//----------------------------------------------
+// ES5: PROTOTYPE OBJECT
