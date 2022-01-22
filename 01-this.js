@@ -74,7 +74,7 @@ const employeeDescription = function () {
     console.log(`${this.firstName} ${this.lastName} is an ${this.job}`)
 }
 // employeeDescription.apply(employee) // CAN ALSO USE "call"
-// shoutOut() // USEFUL WHEN YOU NEED BREVITY & OTHER CASES
+// shoutOut() // USEFUL WHEN YOU NEED BREVITY OR AS A DESIGN PATTERN
 
 
 
