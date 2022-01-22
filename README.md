@@ -5,3 +5,5 @@
 2. Prototypes - Explanations for prototypes within Javascript including examples with ES6 Classes, extending base prototypes, constructors and the Prototype Chain.
 
 3. Polyfills - TBD.
+
+4. NEW Features - TBD.

@@ -22,7 +22,7 @@ const car = new Car('BMW', '550i', 2020)
 
 //----------------------------------------------
 // ES5: BASE "Person" PROTOTYPE & METHODS.
-// METHODS CAN BE RE-WRITTEN AS THE OBJECT INSTACE "new Person()"
+// A PROTOTYPE CAN BE RE-WRITTEN AFTER THE INSTANCE "new Person()"
 // LOOKS AT THE PROTOTYPE CHAIN FOR THE LATEST DECLARATION.
 // THE PROTOTYPE CAN BE EXTENDED DYNAMICALLY OR HARD-CODED
 // ATTRIBUTES, FUNCTIONS, ARRAYS, OBJECTS, CONSTANTS, ETC.
@@ -35,9 +35,14 @@ Person.prototype.sayName = function () {
 const me = new Person('George Costanza')
 // me.sayName()
 Person.prototype.sayName = function () {
-    console.log('My other name is Art Van De Lay.')
+    console.log(`Did I say ${this.name}? I meant Art Van De Lay.`)
 }
 // me.sayName()
+
+
+//----------------------------------------------
+// TODO: ES5 & ES6 PRIVATE ATTRIBUTES & METHODS.
+
 
 
 //----------------------------------------------
