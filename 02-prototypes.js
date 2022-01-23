@@ -90,13 +90,28 @@ function Dog () {
 }
 const pet = new Dog()
 // pet.bark()
-// pet.sit() // DOES NOT WORK; NOT INTENDED TO WORK
+// pet.sit() // WON'T WORK; NOT INTENDED TO WORK
 // pet.sitsit()
 
 
-//----------------------------------------------
-// ES5: PROTOTYPE CHAIN "Employee" FROM "Person"
+class Hotgirl {
+    #phoneNumber = '555928883' // FAKE NUMBER DON'T CALL ;)
+    askHerNumber() {
+        return this.#phoneNumber
+    }
+    #kiss() {
+        return 'Smooch!'
+    }
+    comfortZone() {
+        return this.#kiss()
+    }
+}
+const girl = new Hotgirl()
+// console.log(girl.#phoneNumber) // WON'T WORK; NOT INTENDED TO WORK
+// console.log(girl.#kiss()) // WON'T WORK; NOT INTENDED TO WORK
+console.log(girl.askHerNumber())
+console.log(girl.comfortZone())
 
 
 //----------------------------------------------
-// ES5: PROTOTYPE OBJECT
+// ES5 & ES6 PROTOTYPE CHAIN
