@@ -1,6 +1,6 @@
 
 // ES6 CLASSES ARE SYNTACTIC SUGAR FOR PROTOTYPES.
-// YOU CAN STILL EXTEND THE PROTOTYPE AS SHOWN BELOW.
+// YOU CAN STILL EXTEND OR OVERWRITE THE PROTOTYPE AS SHOWN BELOW.
 // BROWSERS, LIBRARIES & FRAMEWORKS INTERPRET
 // ES6 CLASSES AS PROTOTYPES UNDER THE HOOD.
 class Car {
@@ -18,6 +18,10 @@ Car.prototype.condition = 'old'
 const car = new Car('BMW', '550i', 2020)
 // console.log(car.details())
 // console.log(car.condition)
+// Car.prototype.details = function () {
+//     return 'Overwritten prototype method!'
+// }
+// console.log(car.details())
 
 
 //----------------------------------------------
@@ -42,8 +46,52 @@ Person.prototype.sayName = function () {
 
 
 //----------------------------------------------
-// TODO: ES5 & ES6 PRIVATE ATTRIBUTES & METHODS.
+// ES5 & ES6 PRIVATE ATTRIBUTES & METHODS.
+// USE VARIABLES FOR PROPERTIES & METHODS THOUGH THEY
+// WILL NOT BE BOUND TO THE PROTOTYPE & WILL TAKE UP
+// MORE MEMORY. GARBAGE COLLECTED AFTER OBJ IS DESTROYED.
+const Student = (function () {
+    function Student (name) {
+        this.getName = function () {
+            return name
+        }
+        const grades = ['A', 'F', 'C', 'B-']
+        this.getGrades = function () {
+            return grades
+        }
+    }
+    return Student
+}())
+const classmate = new Student('Ben Stiller')
+// console.log(classmate)
+// console.log(classmate.getName())
+// console.log(classmate.getGrades())
 
+// IN THE ABOVE PATTERN, METHODS ARE ALSO PRIVATE.
+// THIS WILL NOT OVERWRITE "getName()"
+Student.prototype.getName = function () {
+    return 'Jerry Stiller'
+}
+// console.log(classmate.getName())
+
+// ANOTHER DESIGN PATTERN WITHOUT THE IIFE.
+function Dog () {
+    let command
+    this.bark = function () {
+        console.log('bark!')
+    }
+    const sit = function () {
+        command = 'sit!'
+        console.log(command)
+    }
+    this.sitsit = function () {
+        return sit()
+    }
+}
+const pet = new Dog()
+// pet.bark()
+// pet.sit() // DOES NOT WORK; NOT INTENDED TO WORK
+// pet.sitsit()
 
 
 //----------------------------------------------
