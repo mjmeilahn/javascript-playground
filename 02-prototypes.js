@@ -34,8 +34,9 @@ Person.prototype.sayName = function () {
 }
 const me = new Person('George Costanza')
 // me.sayName()
+Person.prototype.newName = 'Art Van De Lay'
 Person.prototype.sayName = function () {
-    console.log(`Did I say ${this.name}? I meant Art Van De Lay.`)
+    console.log(`Did I say ${this.name}? I meant ${this.newName}.`)
 }
 // me.sayName()
 
