@@ -1,4 +1,5 @@
 
+//----------------------------------------------
 // ES6 CLASSES ARE SYNTACTIC SUGAR FOR PROTOTYPES.
 // YOU CAN STILL EXTEND OR OVERWRITE THE PROTOTYPE AS SHOWN BELOW.
 // BROWSERS, LIBRARIES & FRAMEWORKS INTERPRET
@@ -9,7 +10,6 @@ class Car {
         this.make = make
         this.model = model
     }
-
     details() {
         return `My ${this.make} ${this.model} was made in ${this.year}.`
     }
@@ -29,7 +29,7 @@ const car = new Car('BMW', '550i', 2020)
 // A PROTOTYPE CAN BE RE-WRITTEN AFTER THE INSTANCE "new Person()"
 // LOOKS AT THE PROTOTYPE CHAIN FOR THE LATEST DECLARATION.
 // THE PROTOTYPE CAN BE EXTENDED DYNAMICALLY (ANTI-PATTERN) OR
-// HARD-CODED ATTRIBUTES, FUNCTIONS, ARRAYS, OBJECTS, CONSTANTS, ETC.
+// HARD-CODED ATTRIBUTES, FUNCTIONS, ARRAYS, OBJECTS, SYMBOLS, ETC.
 function Person (name) {
     this.name = name
 }
@@ -50,6 +50,26 @@ Person.prototype.sayName = function () {
 // USE VARIABLES FOR PROPERTIES & METHODS THOUGH THEY
 // WILL NOT BE BOUND TO THE PROTOTYPE & WILL TAKE UP
 // MORE MEMORY. GARBAGE COLLECTED AFTER OBJ IS DESTROYED.
+function Dog () {
+    let command
+    this.bark = function () {
+        console.log('bark!')
+    }
+    const sit = function () {
+        command = 'sit!'
+        console.log(command)
+    }
+    this.sitsit = function () {
+        return sit()
+    }
+}
+const pet = new Dog()
+// pet.bark()
+// pet.sit() // WON'T WORK; NOT INTENDED TO WORK
+// pet.sitsit()
+
+
+// IIFE FOR CLOSURES, CROCKFORD DESIGN PATTERN.
 const Student = (function () {
     function Student (name) {
         this.getName = function () {
@@ -73,25 +93,6 @@ Student.prototype.getName = function () {
     return 'Jerry Stiller'
 }
 // console.log(classmate.getName())
-
-// ANOTHER DESIGN PATTERN WITHOUT THE IIFE.
-function Dog () {
-    let command
-    this.bark = function () {
-        console.log('bark!')
-    }
-    const sit = function () {
-        command = 'sit!'
-        console.log(command)
-    }
-    this.sitsit = function () {
-        return sit()
-    }
-}
-const pet = new Dog()
-// pet.bark()
-// pet.sit() // WON'T WORK; NOT INTENDED TO WORK
-// pet.sitsit()
 
 
 class Hotgirl {
