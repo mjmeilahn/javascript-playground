@@ -110,9 +110,26 @@ class Hotgirl {
 const girl = new Hotgirl()
 // console.log(girl.#phoneNumber) // WON'T WORK; NOT INTENDED TO WORK
 // console.log(girl.#kiss()) // WON'T WORK; NOT INTENDED TO WORK
-console.log(girl.askHerNumber())
-console.log(girl.comfortZone())
+// console.log(girl.askHerNumber())
+// console.log(girl.comfortZone())
 
 
 //----------------------------------------------
-// ES5 & ES6 PROTOTYPE CHAIN
+// INHERITANCE & THE PROTOTYPE CHAIN
+class Employee {
+    department = 'Customer Service'
+    role = 'Non-supervisory'
+    constructor (name) {
+        this.name = name
+    }
+}
+class Manager extends Employee {
+    role = 'Supervisor'
+    constructor (name, yearsAtCompany) {
+        super(name)
+        this.yearsAtCompany = yearsAtCompany
+    }
+}
+const sue = new Employee('Sue')
+const bob = new Manager('Bob', 6)
+// console.log(sue, bob)
