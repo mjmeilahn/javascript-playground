@@ -118,18 +118,18 @@ const girl = new Hotgirl()
 // INHERITANCE & THE PROTOTYPE CHAIN
 class Employee {
     department = 'Customer Service'
-    role = 'Non-supervisory'
     constructor (name) {
         this.name = name
     }
 }
 class Manager extends Employee {
     role = 'Supervisor'
-    constructor (name, yearsAtCompany) {
+    constructor (name, role) {
         super(name)
-        this.yearsAtCompany = yearsAtCompany
+        this.role = role
     }
 }
 const sue = new Employee('Sue')
-const bob = new Manager('Bob', 6)
-// console.log(sue, bob)
+const bob = new Manager('Bob', 'Supervisory')
+// console.log(sue)
+// console.log(bob)
