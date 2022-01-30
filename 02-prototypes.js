@@ -133,3 +133,19 @@ const sue = new Employee('Sue')
 const bob = new Manager('Bob', 'Supervisory')
 // console.log(sue)
 // console.log(bob)
+
+function Sayan (name) {
+    this.type = 'fighter'
+    this.name = name
+}
+function SuperSayan (name, blast) {
+    Sayan.call(this, name)
+    this.hair = 'blonde'
+    this.eyes = 'blue'
+    this.blast = blast
+}
+const vegeta = new Sayan('Vegeta')
+const goku = new SuperSayan('Goku', 'KAMEHAMEHAAAAAAAAAAAA!!!')
+// console.log(vegeta)
+// console.log(goku)
+// console.log(Object.getPrototypeOf(goku)) // COPY/PASTE IN BROWSER
