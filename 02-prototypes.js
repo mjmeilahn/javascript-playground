@@ -134,18 +134,18 @@ const bob = new Manager('Bob', 'Supervisory')
 // console.log(sue)
 // console.log(bob)
 
-function Sayan (name) {
+function Saiyan (name) {
     this.type = 'fighter'
     this.name = name
 }
-function SuperSayan (name, blast) {
-    Sayan.call(this, name)
+function SuperSaiyan (name, blast) {
+    Saiyan.call(this, name)
     this.hair = 'blonde'
     this.eyes = 'blue'
     this.blast = blast
 }
-const vegeta = new Sayan('Vegeta')
-const goku = new SuperSayan('Goku', 'KAMEHAMEHAAAAAAAAAAAA!!!')
+const vegeta = new Saiyan('Vegeta')
+const goku = new SuperSaiyan('Goku', 'KAMEHAMEHAAAAAAAAAAAA!!!')
 // console.log(vegeta)
 // console.log(goku)
 // console.log(Object.getPrototypeOf(goku)) // COPY/PASTE IN BROWSER
