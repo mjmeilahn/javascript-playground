@@ -9,6 +9,19 @@ const mdy = moment().tz(timezone).format('L').split('/').join('-')
 let now = moment().tz(timezone).format('MMMM Do YYYY, h:mma')
 const obj = {}
 
+/*
+HOW TO GET STARTED:
+
+const { setLog, log, endLog } = require('./path-to-packages/log')
+setLog('title-of-log-file-goes-here')
+
+// Your everyday JS goes here
+log('Events in your script logged as many times you like')
+
+// Always close the file connection with:
+endLog()
+*/
+
 const setLog = name => {
     obj.name = name.trim()
     obj.file = path.join(process.cwd(), `/logs/${obj.name}-${mdy}-log.txt`)
