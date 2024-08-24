@@ -6,4 +6,4 @@
 
 3. Screen Recorder - Records any open software app or browser window as chosen by the user. Playback is shown automatically.
 
-4. Log - A reusable script to log events to the console and to a text file. Once initialized, a time also runs so events can be seen in a HH:MM:SS format. View file on how to get started.
+4. Log - A reusable script to log events to the console and to a text file. Once initialized, a timer also runs so events can be seen in a HH:MM:SS format. View file on how to get started.
